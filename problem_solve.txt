@@ -9,5 +9,5 @@
 	解决办法：设置core.autocrlf=false，windows也用LF换行。除了记事本，其他编辑器都可以正常编辑
 	
 3 执行git pull命令时出现git：fatal the current branch master has no upstream branch的问题
-	解决办法：执行 git pull -u origin master
+	解决办法：执行 git push -u origin master
 				-u表示update； origin表示远程仓库； master表示主分支
