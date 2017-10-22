@@ -1,2 +1,2 @@
 # gitlearning
-learn gir
+learn git
