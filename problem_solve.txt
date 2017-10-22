@@ -1,0 +1,13 @@
+
+1 解决GitHub中ssh连接出现的
+	The authenticity of host 'github.com (192.30.255.113)' can't be established.
+	解决办法：http://blog.csdn.net/binyao02123202/article/details/20130891
+	
+	
+2 git如何避免“warning：LF will be replaced by CRLF”提示
+	git默认让版本库里用LF换行，git的windows客户端默认会设置core.autocrlf=true
+	解决办法：设置core.autocrlf=false，windows也用LF换行。除了记事本，其他编辑器都可以正常编辑
+	
+3 执行git pull命令时出现git：fatal the current branch master has no upstream branch的问题
+	解决办法：执行 git pull -u origin master
+				-u表示update； origin表示远程仓库； master表示主分支
