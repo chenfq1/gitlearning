@@ -1,2 +1,15 @@
 今日学习了w3c的JavaScript
 要是JavaScript真的想这上面的这么简单就好了
+
+jQuery简单语法
+
+基础语法：
+	美元符号定义jQuery
+	选择符（selector）“查询”和“查找”html元素
+	jQuery的action（）执行对元素的操作
+	
+	示例
+	$(this).hide()-隐藏当前的元素    					this当前的元素
+	$("p").hide()-隐藏所有段落							”“用双引号代表标签<p>
+	$(".test").hide()-隐藏所有的class=“test”的所有元素	".test" 双引号中点加名称代表css选择器
+	$("#test").hide()-隐藏所有id=‘test’的元素			”#test“ 名字前加等号代表标签中的指定id
