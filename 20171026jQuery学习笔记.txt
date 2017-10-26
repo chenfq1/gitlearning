@@ -1,0 +1,48 @@
+jQuery方法链接
+$("#p1").css("color","red").slideup(2000).slidedown(2000);
+
+完整script
+<script>
+$(document).ready(function(){
+	$("button").click(function(){
+		$("#p1").css("color","red").slideUp(2000).slideDown(2000);
+	});
+});
+</script>
+
+jquery中的删除方法
+remove（），empty（）
+$("#div").remove();
+$("#div").empty();
+
+jquery中在DOM树中水平遍历
+	有许多有用的方法让我们在DOM树中进行遍历
+	sibling（）：返回所有同胞元素
+	next（）	:返回下一个同胞元素
+	nextAll（）	：返回备选元素所有跟随的同胞元素
+	nextUntil（）：返回介于两个给定参数之间的所有跟随的同胞元素
+	prev（）	：与上面三种方法类似，方向相反
+	prevAll（）
+	prevUntil（）
+
+jQuery遍历--过滤
+
+三个基本的方法：first（），last（），eq（）
+允许基于其在一组元素中的位置来选择一个特定的元素
+其他过滤方法，比如 filter() 和 not() 允许您选取匹配或不匹配某项指定标准的元素
+
+	first（），返回被选元素的收个元素
+	last（），返回被选元素中带有指定索引号的元素
+				索引号从0开始
+				
+	jQuery filter（）方法
+	filter（）方法允许规定一个标准，不匹配这个标准的元素会从集合中被
+				删除，匹配的元素会被返回
+				
+	下面的例子返回带有类名“intro”的所有<p>元素
+	
+	$(document).ready(function(){
+		$("p").filter(".intro");
+	});
+	
+	not()方法	：与filter方法相反

@@ -1,0 +1,71 @@
+Ajax就是异步JavaScript和XML（asynchronous JavaScript and XML）
+	简短的说，在不重载整个网页的情况下，Ajax通过后台加载数据，并在网页上显示
+	ajax的基础是XMLHttpRequest，XMLHttpRequest对象被所有现代浏览器支持，用于后台与服务器交换数据
+				这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新
+	
+	
+关于jQuery与Ajax
+
+	jQuery提供多个与Ajax有关的方法
+	
+	通过jQuery Ajax方法，，我们可以使用HTTP Get和HTTP Post从远程服务器请求文本，html，xml或json
+	--同时把这些数据直接载入网页中的被选元素
+	
+	没有jQuery Ajax编程有点困难
+	因为不同的浏览器对Ajax的实现并不相同，意味着必须编写额外的代码对浏览器进行测试
+	，jQuery在这点上提供了方便
+	
+	
+jQuery load（）方法是简单但强大的Ajax方法
+	load（）方法从服务器加载数据，把返回的数据放入被选元素中
+	$(selector).load(URL,data,callback);
+	
+	必选的URL参数规定您希望加载的URL
+	可选的data参数规定与请求一同发送的查询字符串键/值集合
+	可选的callback参数是load（）方法完成后执行的函数名称
+	
+jQuery $.get()方法
+	语法：
+	$.get(URL,callback);
+	
+	必须的URL参数规定您希望请求的URL
+	callback参数是请求成功后所执行的函数名
+	
+	实例
+	$("button").click(function(){
+		$.get("demo_test.asp",function(data,status){
+			alert("Data:"+data+"\nstatus:"+status);
+		});
+	});
+	
+jQuery $.post()方法	
+	$.post()方法通过HTTP POST请求从服务器上请求数据
+	语法：
+		$.post(URL,data,callback);
+		必须的URL参数规定您希望请求的URL
+		可选的data参数规定连同请求发送的数据
+		callback参数是请求成功后所执行的函数名
+	
+	实例：
+		$("button").click(function(){
+			$.post("demo_test_post.asp",{
+				name:"Donald Duck",
+				city:"Duckburg"
+			},
+			function(data,status){
+				alert("Data:"+data+"\nstatus:"+status);
+			});
+		});
+	
+
+完整jQuery实例
+	<script src="/jquery/jquery-1.11.1.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$("button").click(function(){
+			$("p").html("W3Cschool");
+		});
+	});
+	</script>
+	
+	

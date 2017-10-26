@@ -13,3 +13,25 @@ jQuery简单语法
 	$("p").hide()-隐藏所有段落							”“用双引号代表标签<p>
 	$(".test").hide()-隐藏所有的class=“test”的所有元素	".test" 双引号中点加名称代表css选择器
 	$("#test").hide()-隐藏所有id=‘test’的元素			”#test“ 名字前加等号代表标签中的指定id
+	
+
+许多jQuery函数涉及动画。这些函数也许会将speedduration作为可选参数
+	例子：$("p").hide("slow")
+	speed或duration参数可设置成许多不同的值，比如"slow","fast","normal"或毫秒
+	实例
+	$("button").click(function(){
+	$("p").hide(1000);
+	})
+	
+jQuery Callback函数
+当动画100%完成后，即调用CallBack函数
+	典型语法
+	$(selector).hide(speed,callback)
+	
+	实例
+	$("button").click(function(){
+	$("p").hide(1000,function(){
+		alert("The paragraph is now hidden");
+	});
+	});
+	
